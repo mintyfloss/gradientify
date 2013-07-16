@@ -5,16 +5,22 @@ function hexToRgb(hexValue) {
 	;
 
 	if (hexValue.length > 0) {
+		// Remove # from hex value
 		if (hexValue[0] == '#') {
 			hexValue = hexValue.substr(1, hexValue.length);
-		} else if (hexValue.length == 3) {
+		}
+
+		if (hexValue.length == 3) {
+			// Expand hex value with 3 characters to 6 characters
 			hexArray[0] = hexValue[0] + hexValue[0];
 			hexArray[1] = hexValue[1] + hexValue[1];
 			hexArray[2] = hexValue[2] + hexValue[2];
 		} else {
+			// Create an array that puts every 2 characters in an element of the array
 			hexArray = hexValue.match(/.{1,2}/g);
 		}
 		
+		// Create RGB value as an array
 		for (var i = 0; i < hexArray.length; i++) {
 			rgbArray.push(parseInt(hexArray[i], 16));
 		}
@@ -47,7 +53,7 @@ function applyGradient(elements, color1, color2, styleProperty) {
 
 			// Applies gradient color
 			elements[i].style[styleProperty] = 'rgb(' + tempColorArray.join(',') + ')';
-      
+
 			// Resets array for next element
 			tempColorArray = [];
 			
