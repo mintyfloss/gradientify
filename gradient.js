@@ -53,7 +53,7 @@ function applyGradient(elements, color1, color2, styleProperty) {
 
 			// Applies gradient color
 			elements[i].style[styleProperty] = 'rgb(' + tempColorArray.join(',') + ')';
-      
+
 			// Resets array for next element
 			tempColorArray = [];
 			
