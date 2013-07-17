@@ -1,6 +1,8 @@
 var MFLOSS = MFLOSS || {};
 
-MFLOSS.gradientify = (function(module) {
+MFLOSS.gradientify = (function() {
+	var module = {};
+
 	function hexToRgb(hexValue) {
 		var
 			hexArray = [],
@@ -65,5 +67,5 @@ MFLOSS.gradientify = (function(module) {
 		}
 	}
 
-	return module;
-}(MFLOSS.gradientify || {}));
+	return module.paint;
+}());
