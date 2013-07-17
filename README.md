@@ -1,4 +1,4 @@
-applygradient
+gradientify
 =============
 
 Applies a gradient over an array of elements.
