@@ -1,6 +1,6 @@
-var MintyFloss = MintyFloss || {};
+var MFLOSS = MFLOSS || {};
 
-MintyFloss.Gradientify = (function(module) {
+MFLOSS.gradientify = (function(module) {
 	function hexToRgb(hexValue) {
 		var
 			hexArray = [],
@@ -66,4 +66,4 @@ MintyFloss.Gradientify = (function(module) {
 	}
 
 	return module;
-}(MintyFloss.Gradientify || {}));
+}(MFLOSS.gradientify || {}));
